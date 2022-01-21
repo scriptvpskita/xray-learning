@@ -58,6 +58,7 @@ apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https:/
 fi
 
 # install xray
+wget https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/xray-setup.sh && chmod +x  xray-setup.sh && ./xray-setup.sh && rm -rf xray-setup.sh
 
 # configurasi xray
 cat > /usr/local/etc/xray/config.json << END 
