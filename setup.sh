@@ -174,7 +174,7 @@ cat > /usr/local/etc/xray/config.json << END
             "settings": {
                 "clients": [
                     {
-                        "id": "", // 填写你的 UUID
+                        "id": "$uuid", // 填写你的 UUID
                         "level": 0,
                         "email": "love@example.com"
                     }
