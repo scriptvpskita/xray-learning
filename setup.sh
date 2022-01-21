@@ -13,8 +13,53 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
+
+# update tools
+apt update -y
+apt upgrade -y
+
+# added directory
+mkdir -p /etc/xray/
+touch /etc/xray/domain
+mkdir -p /var/lib/premium-script/
+touch /var/lib/premium-script/ipvps.conf
 domain=$( cat /etc/v2ray/domain )
 uuid=$(cat /proc/sys/kernel/random/uuid)
+
+# added domain
+read -rp "Domain/Host: " -e host
+echo "start"
+apt install -y socat
+curl https://get.acme.sh | sh
+alias acme.sh=~/.acme.sh/acme.sh
+acme.sh --upgrade --auto-upgrade
+acme.sh --set-default-ca --server letsencrypt
+systemctl stop nginx
+acme.sh --issue -d $host --standalone --keylength ec-384
+acme.sh --install-cert -d $host --ecc \
+--fullchain-file /etc/ssl/private/fullchain.pem \
+--key-file /etc/ssl/private/privkey.pem
+chown -R nobody:nogroup /etc/ssl/private/
+echo $host > /etc/xray/domain
+echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
+sleep 0.5 
+echo "Berhasil Added Domain"
+sleep 2
+
+# install nginx for debian 10/11 or ubuntu 18/20.04
+clear
+source /etc/os-release
+OS=$ID
+if [[ $OS == 'debian' ]]; then
+apt install -y gnupg2 ca-certificates lsb-release debian-archive-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/debian `lsb_release -cs` nginx\n" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
+fi
+if [[ $OS == 'ubuntu' ]]; then
+apt install -y gnupg2 ca-certificates lsb-release ubuntu-keyring && curl https://nginx.org/keys/nginx_signing.key | gpg --dearmor > /usr/share/keyrings/nginx-archive-keyring.gpg && printf "deb [signed-by=/usr/share/keyrings/nginx-archive-keyring.gpg] https://nginx.org/packages/mainline/ubuntu `lsb_release -cs` nginx\n" > /etc/apt/sources.list.d/nginx.list && printf "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 900\n" > /etc/apt/preferences.d/99nginx && apt update -y && apt install -y nginx && mkdir -p /etc/systemd/system/nginx.service.d && printf "[Service]\nExecStartPost=/bin/sleep 0.1\n" > /etc/systemd/system/nginx.service.d/override.conf
+fi
+
+# install xray
+
+# configurasi xray
 cat > /usr/local/etc/xray/config.json << END 
 {
     "log": {
