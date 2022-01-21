@@ -23,7 +23,7 @@ mkdir -p /etc/xray/
 touch /etc/xray/domain
 mkdir -p /var/lib/premium-script/
 touch /var/lib/premium-script/ipvps.conf
-domain=$( cat /etc/v2ray/domain )
+domain=$( cat /etc/xray/domain )
 uuid=$(cat /proc/sys/kernel/random/uuid)
 
 # added domain
@@ -111,8 +111,8 @@ cat > /usr/local/etc/xray/config.json << END
                     ],
                     "certificates": [
                         {
-                            "certificateFile": "/etc/v2ray/v2ray.crt", // replace with your certificate, absolute path
-                            "keyFile": "/etc/v2ray/v2ray.key" // Replace with your private key, absolute path
+                            "certificateFile": "/etc/ssl/private/fullchain.pem", // replace with your certificate, absolute path
+                            "keyFile": "/etc/ssl/private/privkey.pem" // Replace with your private key, absolute path
                         }
                     ]
                 }
