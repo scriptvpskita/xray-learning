@@ -1,5 +1,6 @@
 # xray-learning
 im just newbie
-# contact
+# author
 developer script : william
+# contact
 telegram : https://t.me/user_legend
