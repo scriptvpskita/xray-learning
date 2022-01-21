@@ -15,6 +15,7 @@ fi
 clear
 echo -n > /tmp/other.txt
 read -rp "username: " -e akun
+clear
 echo "----------------------------------";
 echo "-----=[ Monitor User Login ]=-----";
 echo "----------------------------------";
