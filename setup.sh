@@ -206,7 +206,7 @@ cat > /usr/local/etc/xray/config.json << END
                         "id": "$uuid", // 填写你的 UUID
                         "level": 0,
                         "email": "user"
-                    }
+#vmessws
                 ]
             },
             "streamSettings": {
