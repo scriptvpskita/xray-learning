@@ -35,3 +35,16 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojantcp$/a\### '"$user $exp"'\
 ,{"password": "'""$uuid""'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
 systemctl restart xray
+trojanlink="trojan://${uuid}@${domain}:443?sni=isi bug disini#${user}"
+clear
+echo -e ""
+echo -e "========================="
+echo -e "---------TROJAN----------"
+echo -e "========================="
+echo -e "Remarks : ${user}"
+echo -e "Hostname : ${domain}"
+echo -e "port : 443"
+echo -e "Key : ${uuid}"
+echo -e "link : ${trojanlink}"
+echo -e "========================="
+echo -e "Expired On : $exp"
