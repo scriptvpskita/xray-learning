@@ -33,5 +33,5 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojantcp$/a\### '"$user $exp"'\
-},{"password": "'""$uuid""'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
+,{"password": "'""$uuid""'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
 systemctl restart xray
