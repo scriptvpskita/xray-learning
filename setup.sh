@@ -233,3 +233,17 @@ cat > /usr/local/etc/xray/config.json << END
 END
 
 systemctl restart xray
+
+
+cd /usr/bin
+wget -O add-vlessxtls "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-vlessxtls.sh"
+wget -O add-vmess "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-vmess.sh"
+wget -O add-trojan "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-trojan.sh"
+chmod +x add-vlessxtls
+chmod +x add-vmess
+chmod +x add-trojan
+cd
+echo "install sukses"
+echo "reboot dalam 3 detik..."
+sleep 3
+reboot
