@@ -34,4 +34,22 @@ read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vlessxtls$/a\### '"$user $exp"'\
 ,{"id": "'""$uuid""'","flow": "'"xtls-rprx-direct"'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
+vlesslink1="vless://${uuid}@${domain}:443?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=isi bug disini#${user}"
 systemctl restart xray
+clear
+echo -e ""
+echo -e "============================"
+echo -e "---------XRAY/VLESS_XTLS--------"
+echo -e "============================"
+echo -e "Remarks : ${user}"
+echo -e "Domain : ${domain}"
+echo -e "port TLS : 443"
+echo -e "id : ${uuid}"
+echo -e "security : xtls"
+echo -e "Encryption : none"
+echo -e "network : tcp"
+echo -e "flow : xtls-rprx-direct
+echo -e "============================"
+echo -e "link TLS : ${vlesslink1}"
+echo -e "============================"
+echo -e "Expired On : $exp"
