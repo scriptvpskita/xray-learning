@@ -21,6 +21,7 @@ apt upgrade -y
 # added directory
 mkdir -p /etc/xray/
 touch /etc/xray/domain
+touch /etc/v2ray/domain
 mkdir -p /var/lib/premium-script/
 touch /var/lib/premium-script/ipvps.conf
 domain=$( cat /etc/xray/domain )
@@ -41,6 +42,7 @@ acme.sh --install-cert -d $host --ecc \
 --key-file /etc/ssl/private/privkey.pem
 chown -R nobody:nogroup /etc/ssl/private/
 echo $host > /etc/xray/domain
+echo $host > /etc/v2ray/domain
 echo "IP=$host" >> /var/lib/premium-script/ipvps.conf
 sleep 0.5 
 echo "Berhasil Added Domain"
