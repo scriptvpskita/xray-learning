@@ -33,5 +33,5 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vlessxtls$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","flow": "'"xtls-rprx-direct"'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
+,{"id": "'""$uuid""'","flow": "'"xtls-rprx-direct"'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
 systemctl restart xray
