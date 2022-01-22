@@ -78,6 +78,7 @@ cat > /usr/local/etc/xray/config.json << END
                         "level": 0,
                         "email": "user"
                     }
+#vlessxtls
                 ],
                 "decryption": "none",
                 "fallbacks": [
@@ -129,6 +130,7 @@ cat > /usr/local/etc/xray/config.json << END
                         "level": 0,
                         "email": "user"
                     }
+#trojantcp
                 ],
                 "fallbacks": [
                     {
@@ -206,6 +208,7 @@ cat > /usr/local/etc/xray/config.json << END
                         "id": "$uuid", // 填写你的 UUID
                         "level": 0,
                         "email": "user"
+                     }
 #vmessws
                 ]
             },
