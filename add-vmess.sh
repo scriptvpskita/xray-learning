@@ -34,4 +34,39 @@ read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessws$/a\### '"$user $exp"'\
 ,{"id": "'""$uuid""'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
+cat>/etc/xray/$user-tls.json<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "${domain}",
+      "port": "${tls}",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/vmessws",
+      "type": "none",
+      "host": "",
+      "tls": "tls"
+}
+EOF
+vmess_base641=$( base64 -w 0 <<< $vmess_json1)
+vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
 systemctl restart xray
+service cron restart
+clear
+echo -e ""
+echo -e "==============================="
+echo -e "---------XRAY/VMESS_WS---------"
+echo -e "==============================="
+echo -e "Remarks : ${user}"
+echo -e "Domain : ${domain}"
+echo -e "port TLS : 443"
+echo -e "id : ${uuid}"
+echo -e "alterId : 0"
+echo -e "Security : auto"
+echo -e "network : ws"
+echo -e "path : /vmessws"
+echo -e "==============================="
+echo -e "link TLS : ${vmesslink1}"
+echo -e "==============================="
+echo -e "Expired On : $exp"
