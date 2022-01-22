@@ -38,9 +38,9 @@ vlesslink1="vless://${uuid}@${domain}:443?security=xtls&encryption=none&headerTy
 systemctl restart xray
 clear
 echo -e ""
-echo -e "============================"
+echo -e "================================"
 echo -e "---------XRAY/VLESS_XTLS--------"
-echo -e "============================"
+echo -e "================================"
 echo -e "Remarks : ${user}"
 echo -e "Domain : ${domain}"
 echo -e "port TLS : 443"
@@ -49,7 +49,7 @@ echo -e "security : xtls"
 echo -e "Encryption : none"
 echo -e "network : tcp"
 echo -e "flow : xtls-rprx-direct
-echo -e "============================"
+echo -e "================================"
 echo -e "link TLS : ${vlesslink1}"
-echo -e "============================"
+echo -e "================================"
 echo -e "Expired On : $exp"
