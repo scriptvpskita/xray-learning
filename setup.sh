@@ -37,8 +37,8 @@ acme.sh --upgrade --auto-upgrade
 acme.sh --set-default-ca --server letsencrypt
 systemctl stop nginx
 acme.sh --issue -d $host --standalone --keylength ec-384
-acme.sh --install-cert -d $host --ecc \
---fullchain-file /etc/ssl/private/fullchain.pem \
+acme.sh --install-cert -d $host --ecc
+--fullchain-file /etc/ssl/private/fullchain.pem
 --key-file /etc/ssl/private/privkey.pem
 chown -R nobody:nogroup /etc/ssl/private/
 echo $host > /etc/xray/domain
