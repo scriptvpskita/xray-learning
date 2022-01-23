@@ -340,3 +340,5 @@ echo "6.9" > /home/ver
 
 # finihsing
 clear
+apt install figlet
+apt install lolcat
