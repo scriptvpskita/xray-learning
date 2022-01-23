@@ -251,7 +251,7 @@ cd /usr/bin
 wget -O add-host "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-host.sh"
 wget -O add-sub "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-sub.sh"
 wget -O about "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/about.sh"
-wget -O menu "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/menu.sh"
+wget -O menu "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu.sh"
 wget -O add-ssh "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-ssh.sh"
 wget -O trial-ssh "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/trial-ssh.sh"
 wget -O hapus "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/hapus.sh"
