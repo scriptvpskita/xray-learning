@@ -48,7 +48,7 @@ echo -e "id : ${uuid}"
 echo -e "security : xtls"
 echo -e "Encryption : none"
 echo -e "network : tcp"
-echo -e "flow : xtls-rprx-direct
+echo -e "flow : xtls-rprx-direct"
 echo -e "================================"
 echo -e "link TLS : ${vlesslink1}"
 echo -e "================================"
