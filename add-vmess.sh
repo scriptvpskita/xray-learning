@@ -39,7 +39,7 @@ cat>/etc/xray/$user-tls.json<<EOF
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "${tls}",
+      "port": "443",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
