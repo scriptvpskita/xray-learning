@@ -266,7 +266,6 @@ wget -O renew "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/renew
 wget -O autokill "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/tendang.sh"
-wget -O change-port "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/change.sh"
 wget -O port-ovpn "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-ovpn.sh"
 wget -O port-ssl "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-ssl.sh"
 wget -O port-wg "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-wg.sh"
@@ -279,10 +278,6 @@ wget -O wbmn "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/webmin
 wget -O xp "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/xp.sh"
 wget -O update-kernel "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/update-kernel.sh"
 wget -O cek-service "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/cek-service.sh"
-wget -O add-trgo "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-trgo.sh"
-wget -O cek-trgo "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/cek-trgo.sh"
-wget -O del-trgo "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/del-trgo.sh"
-wget -O renew-trgo "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/renew-trgo.sh"
 wget -O menu2 "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/menu2.sh"
 wget -O tcp-tweaker "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/tcp-tweaker.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/autoreboot.sh"
@@ -316,10 +311,6 @@ chmod +x wbmn
 chmod +x xp
 chmod +x update-kernel
 chmod +x cek-service
-chmod +x add-trgo
-chmod +x cek-trgo
-chmod +x del-trgo
-chmod +x renew-trgo
 chmod +x menu2
 chmod +x tcp-tweaker
 chmod +x autoreboot
