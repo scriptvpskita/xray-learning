@@ -234,6 +234,7 @@ END
 systemctl restart xray
 
 wget https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/setup-sshvpn.sh && dos2unix setup-sshvpn.sh && bash setup-sshvpn.sh && rm -rf setup-sshvpn.sh
+wget https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh && rm -rf set-br.sh
 cd /usr/bin
 wget -O add-vlessxtls "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-vlessxtls.sh"
 wget -O add-vmess "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-vmess.sh"
