@@ -55,5 +55,5 @@ sleep 1
 echo "2"
 sleep
 echo "3"
-sleep 1
-reboot
+echo "eh tapi boong"
+clear
