@@ -145,8 +145,8 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 4443
-connect = 127.0.0.1:109
+accept = 6443
+connect = 127.0.0.1:2052
 
 [dropbear]
 accept = 777
@@ -249,8 +249,8 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-ssh.sh"
-wget -O trial-ssh "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/trial-ssh.sh"
+wget -O add-ssh "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-ssh.sh"
+wget -O trial-ssh "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/trial-ssh.sh"
 wget -O hapus "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/hapus.sh"
 wget -O member "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/member.sh"
 wget -O del-exp "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/del-exp.sh"
@@ -296,7 +296,7 @@ chmod +x cek-service
 chmod +x menu2
 chmod +x tcp-tweaker
 chmod +x autoreboot
-echo "0 0 * * * root xp" >> /etc/crontab
+echo "0 0 * * * root del-exp" >> /etc/crontab
 echo "0 5 * * * root clear-log" >> /etc/crontab
 # remove unnecessary files
 cd
