@@ -248,15 +248,12 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O add-host "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-host.sh"
-wget -O add-sub "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-sub.sh"
-wget -O about "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/about.sh"
 wget -O menu "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu.sh"
 wget -O add-ssh "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/add-ssh.sh"
 wget -O trial-ssh "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/trial-ssh.sh"
 wget -O hapus "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/hapus.sh"
 wget -O member "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/member.sh"
-wget -O del-exp "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/delete.sh"
+wget -O del-exp "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/del-exp.sh"
 wget -O cek "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/cek.sh"
 wget -O restart "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/restart.sh"
 wget -O speedtest "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/speedtest_cli.py"
@@ -339,6 +336,7 @@ cd
 rm -f /root/key.pem
 rm -f /root/cert.pem
 rm -f /root/ssh-vpn.sh
+echo "6.9" > /home/ver
 
 # finihsing
 clear
