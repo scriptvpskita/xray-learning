@@ -32,14 +32,11 @@ read -rp "Domain/Host: " -e host
 echo "start"
 apt install -y socat
 curl https://get.acme.sh | sh
-alias acme.sh=~/.acme.sh/acme.sh
-acme.sh --upgrade --auto-upgrade
-acme.sh --set-default-ca --server letsencrypt
+/root/.acme.sh/acme.sh --upgrade --auto-upgrade
+/root/.acme.sh/acme.sh --set-default-ca --server letsencrypt
 systemctl stop nginx
-acme.sh --issue -d $host --standalone --keylength ec-384
-acme.sh --install-cert -d $host --ecc
---fullchain-file /etc/ssl/private/fullchain.pem
---key-file /etc/ssl/private/privkey.pem
+/root/.acme.sh/acme.sh --issue -d $host --standalone --keylength ec-384
+~/.acme.sh/acme.sh --install-cert -d $host --ecc --fullchain-file /etc/ssl/private/fullchain.pem --key-file /etc/ssl/private/privkey.pem
 chown -R nobody:nogroup /etc/ssl/private/
 echo $host > /etc/xray/domain
 echo $host > /etc/v2ray/domain
