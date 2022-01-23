@@ -65,8 +65,10 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 # configurasi xray
 cat > /usr/local/etc/xray/config.json << END 
 {
-    "log": {
-        "loglevel": "warning"
+  "log": {
+    "access": "/var/log/xray/access.log",
+    "error": "/var/log/xray/error.log",
+    "loglevel": "info"
     },
     "inbounds": [
         {
