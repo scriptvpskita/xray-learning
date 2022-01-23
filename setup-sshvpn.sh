@@ -266,21 +266,12 @@ wget -O renew "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/renew
 wget -O autokill "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/tendang.sh"
-wget -O port-ovpn "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-ovpn.sh"
-wget -O port-ssl "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-ssl.sh"
-wget -O port-wg "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-wg.sh"
-wget -O port-tr "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-tr.sh"
-wget -O port-sstp "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-sstp.sh"
-wget -O port-squid "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-squid.sh"
-wget -O port-ws "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-ws.sh"
-wget -O port-vless "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/port-vless.sh"
 wget -O wbmn "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/webmin.sh"
 wget -O xp "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/xp.sh"
 wget -O update-kernel "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/update-kernel.sh"
 wget -O cek-service "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/cek-service.sh"
 wget -O menu2 "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/menu2.sh"
 wget -O tcp-tweaker "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/tcp-tweaker.sh"
-wget -O autoreboot "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/autoreboot.sh"
 chmod +x info-vmess
 chmod +x info-vless
 chmod +x add-sub
@@ -301,12 +292,6 @@ chmod +x ceklim
 chmod +x ram
 chmod +x renew
 chmod +x clear-log
-chmod +x change-port
-chmod +x port-ovpn
-chmod +x port-ssl
-chmod +x port-wg
-chmod +x port-sstp
-chmod +x port-squid
 chmod +x wbmn
 chmod +x xp
 chmod +x update-kernel
