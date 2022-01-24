@@ -17,7 +17,7 @@ fi
 clear
 
 # step one : install package
-mkdir -p /etc/william
+mkdir -p /etc/william/
 apt install nodejs
 apt install npm
 cd /etc/william/
