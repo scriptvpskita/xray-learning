@@ -342,3 +342,4 @@ echo "6.9" > /home/ver
 clear
 apt install figlet
 apt install lolcat
+setup-sshvpn.sh
