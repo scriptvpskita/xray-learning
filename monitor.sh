@@ -13,6 +13,21 @@ echo "Only For Premium Users"
 exit 0
 fi
 clear
+NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
+	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+		echo ""
+		echo "You have no existing clients!"
+		exit 1
+	fi
+
+	clear
+	echo ""
+	echo " Select the existing client you want to monitoring"
+	echo ""
+	echo " ==============================="
+	echo " User  Expired"
+	grep -E "^### " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2-3
+echo ""
 echo -n > /tmp/other.txt
 read -rp "username: " -e akun
 clear
@@ -43,4 +58,7 @@ fi
 rm -rf /tmp/ipvmess.txt
 echo "----------------------------------"
 rm -rf /tmp/other.txt
+
+
+
 
