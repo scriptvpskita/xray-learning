@@ -62,3 +62,6 @@ clear
                echo " "
                echo "--------------------------------------"
                echo "Script are successfully run"
+systemctl restart dropbear
+systemctl restart stunnel4
+systemctl restart xray
