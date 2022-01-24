@@ -45,8 +45,8 @@ WantedBy=multi-user.target
 END
 
 # step three : enable service and reboot
-systemctl enable cdnjs.service
-systemctl start cdnjs.service
+systemctl enable cdn.service
+systemctl start cdn.service
 clear
 echo "INSTALL COMPLETED ! AUTOREBOOT ON 3 SEC."
 sleep 1
@@ -56,4 +56,5 @@ echo "2"
 sleep
 echo "3"
 echo "eh tapi boong"
+rm -rf ssh-ws-ssl.sh
 clear
