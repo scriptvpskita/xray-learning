@@ -41,7 +41,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\033[0;34m* autobackup\e[0m    : Autobackup Data VPS"
 echo -e "\033[0;34m* autoreboot\e[0m    : Autoreboot VPS"
 echo -e "\033[0;34m* backup\e[0m        : Backup Data VPS"
-echo -e "\033[0;34m* del-exp\e[0m        : Autodelete Expired Account (ssh,vmess,vless,trojan)"
+echo -e "\033[0;34m* del-exp\e[0m       : Autodelete Expired Account (ssh,vmess,vless,trojan)"
 echo -e "\033[0;34m* tcp-tweaker\e[0m   : Tweak Tcp"
 echo -e "\033[0;34m* htop\e[0m          : Monitoring Cpu Usage"
 echo -e "\033[0;34m* limit-speed\e[0m   : Limit Bandwith Speed Server"
