@@ -62,11 +62,11 @@ cd /usr/bin
 
 wget -O autobackup "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/autobackup.sh"
 
-wget -O backup "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/backup.sh"
+wget -O backup "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/backup.sh"
 
-wget -O bckp "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/bckp.sh"
+wget -O bckp "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/bckp.sh"
 
-wget -O restore "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/restore.sh"
+wget -O restore "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/restore.sh"
 
 wget -O strt "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/strt.sh"
 
