@@ -29,6 +29,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/usr/local/etc/xray/config.json")
 user=$(grep -E "^### " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
 exp=$(grep -E "^### " "/usr/local/etc/xray/config.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
 sed -i "/^### $user $exp/,/^,{/d" /usr/local/etc/xray/config.json
+rm -f /etc/v2ray/$user-tls.json
 systemctl restart xray
 clear
 echo " Account Deleted Successfully"
