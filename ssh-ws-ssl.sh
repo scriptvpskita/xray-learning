@@ -18,11 +18,12 @@ clear
 
 # step one : install package
 mkdir -p /etc/william/
-apt install nodejs
-apt install npm
 cd /etc/william/
+apt install npm -y
+apt install nodejs -y
 wget -O PDirect.js "https://raw.githubusercontent.com/xkjdox/sojsiws/main/ndjdjdjdi.js"
 chmod +x PDirect.js
+cd
 
 # step two : configurasi sshws+ssl443
 cat > /etc/systemd/system/cdn.service << END 
