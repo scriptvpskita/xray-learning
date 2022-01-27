@@ -297,3 +297,4 @@ echo ""
 echo " Reboot 15 Sec"
 sleep 15
 rm -f setup
+rm -rf setup.sh
