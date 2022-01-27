@@ -239,6 +239,10 @@ wget https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/setup-ss
 wget https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh && rm -rf set-br.sh
 wget https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/ssh-ws-ssl.sh && chmod +x ssh-ws-ssl.sh && ./ssh-ws-ssl.sh && rm -rf ssh-ws-ssl.sh
 cd /usr/bin
+wget -O menu2 "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu2.sh"
+wget -O menu "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu.sh"
+wget -O add-ssh "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-ssh.sh"
+wget -O trial-ssh "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/trial-ssh.sh"
 wget -O add-vlessxtls "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-vlessxtls.sh"
 wget -O add-vmess "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-vmess.sh"
 wget -O add-trojan "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-trojan.sh"
@@ -251,6 +255,10 @@ chmod +x add-trojan
 chmod +x clear-log
 chmod +x monitor
 chmod +x change-port
+chmod +x menu2
+chmod +x menu
+chmod +x add-ssh
+chmod +x trial-ssh
 cd
 echo "install sukses"
 echo " "
