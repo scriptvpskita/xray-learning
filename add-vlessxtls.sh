@@ -14,6 +14,7 @@ exit 0
 fi
 clear
 source /var/lib/premium-script/ipvps.conf
+tls="$(cat ~/log-install.txt | grep -w "AIO" | cut -d: -f2|sed 's/ //g')"
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
@@ -34,7 +35,7 @@ read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vlessxtls$/a\### '"$user $exp"'\
 ,{"id": "'""$uuid""'","flow": "'"xtls-rprx-direct"'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
-vlesslink1="vless://${uuid}@${domain}:443?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=isi bug disini#${user}"
+vlesslink1="vless://${uuid}@${domain}:${tls}?security=xtls&encryption=none&headerType=none&type=tcp&flow=xtls-rprx-direct&sni=isi_bug_disini#${user}"
 systemctl restart xray
 clear
 echo -e ""
@@ -43,7 +44,7 @@ echo -e "---------XRAY/VLESS_XTLS--------"
 echo -e "================================"
 echo -e "Remarks : ${user}"
 echo -e "Domain : ${domain}"
-echo -e "port TLS : 443"
+echo -e "port TLS : ${tls}"
 echo -e "id : ${uuid}"
 echo -e "security : xtls"
 echo -e "Encryption : none"
