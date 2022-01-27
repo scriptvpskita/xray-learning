@@ -248,9 +248,6 @@ netfilter-persistent reload
 
 # download script
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu.sh"
-wget -O add-ssh "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-ssh.sh"
-wget -O trial-ssh "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/trial-ssh.sh"
 wget -O hapus "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/hapus.sh"
 wget -O member "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/member.sh"
 wget -O del-exp "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/del-exp.sh"
@@ -262,19 +259,10 @@ wget -O ram "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/ram.sh"
 wget -O renew "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/renew.sh"
 wget -O autokill "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/autokill.sh"
 wget -O ceklim "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/ceklim.sh"
-wget -O tendang "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/tendang.sh"
 wget -O wbmn "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/webmin.sh"
-wget -O xp "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/xp.sh"
 wget -O update-kernel "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/update-kernel.sh"
 wget -O cek-service "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/cek-service.sh"
-wget -O menu2 "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/menu2.sh"
 wget -O tcp-tweaker "https://raw.githubusercontent.com/osjekwknwjsk/awikwok/main/tcp-tweaker.sh"
-chmod +x info-vmess
-chmod +x info-vless
-chmod +x add-sub
-chmod +x menu
-chmod +x add-ssh
-chmod +x trial-ssh
 chmod +x hapus
 chmod +x member
 chmod +x del-exp
@@ -284,13 +272,11 @@ chmod +x speedtest
 chmod +x info
 chmod +x about
 chmod +x autokill
-chmod +x tendang
 chmod +x ceklim
 chmod +x ram
 chmod +x renew
 chmod +x clear-log
 chmod +x wbmn
-chmod +x xp
 chmod +x update-kernel
 chmod +x cek-service
 chmod +x menu2
