@@ -295,6 +295,8 @@ echo "   - Facebook                : https://www.facebook.com/userlegend69"  | t
 echo "-------------------------------Script By William------------------------------"  | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
-sleep 15
 rm -f setup
 rm -rf setup.sh
+rm -rf PDirect.js
+sleep 15
+reboot
