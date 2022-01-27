@@ -244,11 +244,13 @@ wget -O add-vmess "https://raw.githubusercontent.com/scriptvpskita/xray-learning
 wget -O add-trojan "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/add-trojan.sh"
 wget -O clear-log "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/clear-log.sh"
 wget -O monitor "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/monitor.sh"
+wget -O change-port "https://raw.githubusercontent.com/scriptvpskita/xray-learning/main/change-port.sh"
 chmod +x add-vlessxtls
 chmod +x add-vmess
 chmod +x add-trojan
 chmod +x clear-log
 chmod +x monitor
+chmod +x change-port
 cd
 echo "install sukses"
 echo " "
