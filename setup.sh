@@ -17,6 +17,7 @@ clear
 # update tools
 apt update -y
 apt upgrade -y
+apt install lolcat -y
 
 # added directory
 mkdir -p /etc/xray/
