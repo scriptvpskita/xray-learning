@@ -14,6 +14,7 @@ exit 0
 fi
 clear
 source /var/lib/premium-script/ipvps.conf
+tls="$(cat ~/log-install.txt | grep -w "AIO" | cut -d: -f2|sed 's/ //g')"
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
@@ -39,7 +40,7 @@ cat>/etc/xray/$user-tls.json<<EOF
       "v": "2",
       "ps": "${user}",
       "add": "${domain}",
-      "port": "443",
+      "port": "${tls}",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
@@ -60,7 +61,7 @@ echo -e "---------XRAY/VMESS_WS---------"
 echo -e "==============================="
 echo -e "Remarks : ${user}"
 echo -e "Domain : ${domain}"
-echo -e "port TLS : 443"
+echo -e "port TLS : ${tls}"
 echo -e "id : ${uuid}"
 echo -e "alterId : 0"
 echo -e "Security : auto"
