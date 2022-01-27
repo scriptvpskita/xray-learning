@@ -19,6 +19,8 @@ read -p "Password : " Pass
 read -p "Expired (hari): " masaaktif
 
 IP=$(wget -qO- ipinfo.io/ip);
+ssl="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d: -f2)"
+ssl2="$(cat ~/log-install.txt | grep -w "Stunnel4" | cut -d " " -f 22)"
 sleep 1
 echo Ping Host
 echo Cek Hak Akses...
@@ -35,9 +37,9 @@ useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
-echo -e "=========================="
+echo -e "==========================="
 echo -e "INFORMASI PREMIUM"
-echo -e "SSH & OVPN ACCOUNT"
+echo -e "SSH ACCOUNT"
 echo -e "==========================="
 echo -e "IP-Addres : $IP"
 echo -e "Hostname : $DOMAIN"
@@ -46,10 +48,10 @@ echo -e "Password : $Pass"
 echo -e "=========================="
 echo -e "Port openssh : 22"
 echo -e "Port dropbear : 109, 143"
-echo -e "Port stunnel : 6443"
+echo -e "Port stunnel : $ssl"
 echo -e "Port ssh websocket http : 2052"
-echo -e "Port ssh websocket https : 6443"
-echo -e "Port squid : 8080"
+echo -e "Port ssh websocket https : $ssl2"
+echo -e "Port squid : 8080, 3128"
 echo -e "Port badvpn/udpgw : 7100-7300"
 echo -e "=========================="
 echo -e "Payload Websocket HTTP : GET / HTTP/1.1[crlf]Host: $DOMAIN[crlf]Upgrade: websocket[crlf][crlf]"
