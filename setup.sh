@@ -254,32 +254,35 @@ echo "install sukses"
 echo " "
 echo "Installation has been completed!!"
 echo " "
-echo "=================================- Premium-===========================" | tee -a log-install.txt
-echo "" | tee -a log-install.txt
-echo "--------------------------------------------------------------------------------" | tee -a log-install.txt
+echo "=================================- Premium -===================================="  | tee -a log-install.txt
+echo ""  | tee -a log-install.txt
+echo "--------------------------------------------------------------------------------"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
+echo "   - Webmin                  : 10000"  | tee -a log-install.txt
 echo "   - Stunnel4                : 6443, 777"  | tee -a log-install.txt
 echo "   - Dropbear                : 109, 143"  | tee -a log-install.txt
 echo "   - Squid Proxy             : 3128, 8080 (limit to IP Server)"  | tee -a log-install.txt
 echo "   - Badvpn                  : 7100, 7200, 7300"  | tee -a log-install.txt
-echo "   - Nginx                   : 8081, 80"  | tee -a log-install.txt
-echo "   - AIO TROJAN,VMESS,VLESS                : 443"  | tee -a log-install.txt
+echo "   - Nginx                   : 80"  | tee -a log-install.txt
+echo "   - XRAY AIO                : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Sesuai tkp"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
-echo "   - Autobackup Data" | tee -a log-install.txt
-echo "   - Restore Data" | tee -a log-install.txt
-echo "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo "   - Clear Log On            : 00.00 wib"  | tee -a log-install.txt
+echo "   - Auto Delete Expired Acc : 00.05 wib"  | tee -a log-install.txt
+echo "   - Autobackup Data"  | tee -a log-install.txt
+echo "   - Restore Data"  | tee -a log-install.txt
+echo "   - Auto Delete Expired Account"  | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
+echo ""   | tee -a log-install.txt
 echo "   - Dev/Main                : william"  | tee -a log-install.txt
 echo "   - Telegram                : t.me/user_legend"  | tee -a log-install.txt
-echo "   - Facebook                : https://www.facebook.com/userlegend69" | tee -a log-install.txt
-echo "-------------------------------Script By William------------------------------" | tee -a log-install.txt
+echo "   - Facebook                : https://www.facebook.com/userlegend69"  | tee -a log-install.txt
+echo "-------------------------------Script By William------------------------------"  | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
 sleep 15
