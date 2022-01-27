@@ -18,6 +18,7 @@ clear
 apt update -y
 apt upgrade -y
 apt install lolcat -y
+apt install netfilter-persistent -y
 
 # added directory
 mkdir -p /etc/xray/
