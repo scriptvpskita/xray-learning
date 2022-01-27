@@ -14,6 +14,7 @@ exit 0
 fi
 clear
 source /var/lib/premium-script/ipvps.conf
+tls="$(cat ~/log-install.txt | grep -w "AIO" | cut -d: -f2|sed 's/ //g')"
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/v2ray/domain)
 else
@@ -35,7 +36,7 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojantcp$/a\### '"$user $exp"'\
 ,{"password": "'""$uuid""'","level": '"0"',"email": "'""$user""'"}' /usr/local/etc/xray/config.json
 systemctl restart xray
-trojanlink="trojan://${uuid}@${domain}:443?sni=isi bug disini#${user}"
+trojanlink="trojan://${uuid}@${domain}:{tls}?sni=isi_bug_disini#${user}"
 clear
 echo -e ""
 echo -e "=================================="
@@ -43,7 +44,7 @@ echo -e "---------XRAY/TROJAN_TCP----------"
 echo -e "=================================="
 echo -e "Remarks : ${user}"
 echo -e "Hostname : ${domain}"
-echo -e "port : 443"
+echo -e "port : ${tls}"
 echo -e "Key : ${uuid}"
 echo -e "=================================="
 echo -e "link : ${trojanlink}"
